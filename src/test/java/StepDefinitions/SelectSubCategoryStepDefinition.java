@@ -43,22 +43,24 @@ public class SelectSubCategoryStepDefinition {
         Thread.sleep(5000);
     }
 
- /*   @And("Login with valid credentials")
+  @And("Login with valid credentials")
     public void Login_with_valid_credentials() throws InterruptedException {
-        subCategoryPage.findLoginAnchor().click();
+     /*   subCategoryPage.findLoginAnchor().click();
         Thread.sleep(5000);
         login = new LoginPage(driver);
-        Thread.sleep(10000);
+        Thread.sleep(10000);*/
+       driver.navigate().to("https://homzmart.com/en/login");
+       Thread.sleep(3000);
         subCategoryPage.EmailElementPOM().sendKeys("beauty.moon.light@hotmail.com\n");
         subCategoryPage.PasswordElementPOM().sendKeys("28101989");
         subCategoryPage.LoginButtonElementPOM().click();
         Thread.sleep(3000);
     }
-*/
+
     @When("User click randomly on any category")
     public void Hover_User_Category() throws InterruptedException {
         action= new Actions(driver);
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         WebElement categoryEle = subCategoryPage.findCategoryElement();
         Thread.sleep(20000);
         /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));

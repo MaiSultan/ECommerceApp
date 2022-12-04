@@ -37,11 +37,11 @@ public class SearchProductStepDefinition {
 
     @When("Go to Search textbox & Type any product name and press enter")
     public void go_to_search_textbox_type_any_product_name_and_press_enter() throws InterruptedException {
-        Thread.sleep(15000);
+        Thread.sleep(3000);
         search.findSearchBoxPlaceholder().sendKeys("سرير");
-
+        Thread.sleep(2000);
         search.findSearchBoxPlaceholder().sendKeys(Keys.ENTER);
-        Thread.sleep(5000);
+        Thread.sleep(7000);
     }
 
     @Then("Matching product results should be displayed")

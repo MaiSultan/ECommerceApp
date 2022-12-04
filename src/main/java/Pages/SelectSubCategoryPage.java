@@ -18,11 +18,11 @@ public class SelectSubCategoryPage {
     }
 
     public WebElement findCategoryElement(){
-        return driver.findElement(By.xpath("//a[@href=\"/products/3#1\"]"));//الأثاث
+        return driver.findElement(By.xpath("//a[@href=\"/en/products/3#1\"]"));//الأثاث
     }
 
     public WebElement findSubCategory(){
-        return driver.findElement(By.xpath("//a[@href=\"/products/7#1\"]"));//كرسي
+        return driver.findElement(By.xpath("//a[@href=\"/en/products/7#1\"]"));//كرسي
     }
     public String findCurrentURL(){
         return driver.getCurrentUrl();

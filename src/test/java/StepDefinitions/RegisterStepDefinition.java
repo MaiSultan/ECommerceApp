@@ -42,7 +42,8 @@ public class RegisterStepDefinition {
     public void Valid_Data(){
         register.FirstNameElementPOM().sendKeys("Eng.Mai");
         register.LastNameElementPOM().sendKeys("Talaat");
-        register.EmailElementPOM().sendKeys("snowwhite892008@hotmail.com");
+        //register.EmailElementPOM().sendKeys("snowwhite892008@hotmail.com");
+        register.EmailElementPOM().sendKeys("mai@hotmail.com");
         register.PasswordElementPOM().sendKeys("MT@123456");
         register.ReEnterPasswordElementPOM().sendKeys("MT@123456");
     }
