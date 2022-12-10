@@ -1,13 +1,13 @@
-package Pages;
+package org.example.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class ResetPasswordPage {
+public class P04_resetPassword {
     WebDriver driver;
-    public ResetPasswordPage(WebDriver driver){
+    public P04_resetPassword(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -17,7 +17,7 @@ public class ResetPasswordPage {
     }
 
     public WebElement EmailElementPOM(){
-        return driver.findElement(By.id("input-3809"));
+        return driver.findElement(By.id("input-74"));
       //return driver.findElement(By.xpath("//div//input[@id=\"input-3809\"]"));
     }
     public WebElement ResetPassElementPOM(){

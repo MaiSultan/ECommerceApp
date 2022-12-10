@@ -1,21 +1,20 @@
-package StepDefinitions;
+package org.example.stepDefs;
 
-import Pages.RegistrationPage;
+import org.example.pages.P01_register;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class RegisterStepDefinition {
+public class D01_registerStepDef {
     public WebDriver driver=  null;
-    RegistrationPage register;
+    P01_register register;
 
    @Given("User opens Google Chrome browser")
     public void OpenChromeBrowser() throws InterruptedException {
@@ -29,7 +28,7 @@ public class RegisterStepDefinition {
        driver.manage().window().maximize();
        Thread.sleep(2000);
 
-       register = new RegistrationPage(driver);
+       register = new P01_register(driver);
     }
 
    @And("User goes to register URL")
@@ -40,12 +39,12 @@ public class RegisterStepDefinition {
 
     @When("Valid First name,Last name,Email,Password & matching Retyped password")
     public void Valid_Data(){
-        register.FirstNameElementPOM().sendKeys("Eng.Mai");
-        register.LastNameElementPOM().sendKeys("Talaat");
+        register.FirstNameElementPOM().sendKeys("Automation");
+        register.LastNameElementPOM().sendKeys("Testing Egy");
         //register.EmailElementPOM().sendKeys("snowwhite892008@hotmail.com");
-        register.EmailElementPOM().sendKeys("mai@hotmail.com");
-        register.PasswordElementPOM().sendKeys("MT@123456");
-        register.ReEnterPasswordElementPOM().sendKeys("MT@123456");
+        register.EmailElementPOM().sendKeys("testing@automateEgy.com");
+        register.PasswordElementPOM().sendKeys("test@123456");
+        register.ReEnterPasswordElementPOM().sendKeys("test@123456");
     }
 
     @And("User clicks on Create button")

@@ -1,20 +1,19 @@
-package StepDefinitions;
+package org.example.stepDefs;
 
-import Pages.LoginPage;
+import org.example.pages.P02_login;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginStepDefinition {
+public class D02_loginStepDef {
     public WebDriver driver = null;
-    LoginPage login;
+    P02_login login;
 
     @Given("User goes to login URL via Google Chrome browser")
     public void OpenChromeBrowser() throws InterruptedException {
@@ -27,7 +26,7 @@ public class LoginStepDefinition {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         Thread.sleep(2000);
-        login = new LoginPage(driver);
+        login = new P02_login(driver);
         driver.navigate().to("https://homzmart.com/en/login");
     }
 

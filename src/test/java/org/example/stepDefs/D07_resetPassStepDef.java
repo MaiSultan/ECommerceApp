@@ -1,20 +1,20 @@
-package StepDefinitions;
+package org.example.stepDefs;
 
-import Pages.ResetPasswordPage;
+import org.example.pages.P04_resetPassword;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.Before;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ResetPassStepDefinition {
+import java.time.Duration;
+
+public class D07_resetPassStepDef {
     public WebDriver driver = null;
-    ResetPasswordPage resetPass = null;
+    P04_resetPassword resetPass = null;
 
     @Given("User goes to login page for reset password")
     public void user_goes_to_login_page_for_reset_password() throws InterruptedException {
@@ -31,7 +31,7 @@ public class ResetPassStepDefinition {
         Thread.sleep(3000);
 
         //Step4: Create objects
-        resetPass = new ResetPasswordPage(driver);
+        resetPass = new P04_resetPassword(driver);
         driver.navigate().to("https://homzmart.com/en/login");
     }
 
@@ -39,16 +39,19 @@ public class ResetPassStepDefinition {
     public void Click_Forget_Password_Anchor() throws InterruptedException {
         resetPass.ForgetPassElementPOM().click();
         Thread.sleep(4000);
+        //resetPass.ResetPassElementPOM().sendKeys("mai.capmas@gmail.com");
     }
 
     @And("Clicks on Reset password Button")
     public void Click_on_Reset_Password_Button() throws InterruptedException {
         resetPass.ResetPassElementPOM().click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
     }
 
     @When("User enters own email")
     public void User_Enters_Own_Email() {
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
         resetPass.EmailElementPOM().sendKeys("mai.capmas@gmail.com");
         //resetPass.EmailElementPOM().sendKeys(Keys.ENTER);
     }

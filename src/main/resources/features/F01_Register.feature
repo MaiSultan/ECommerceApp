@@ -1,11 +1,11 @@
 @Regression
-Feature: User can create a new account
+Feature: F01_Register | users could register with new accounts
 
 #  Background: User opens Google Chrome browser
 #    And User goes to register URL
 
 
-  Scenario: User could register with valid data
+  Scenario: guest user could register with valid data successfully
     Given User opens Google Chrome browser
     And User goes to register URL
     When Valid First name,Last name,Email,Password & matching Retyped password

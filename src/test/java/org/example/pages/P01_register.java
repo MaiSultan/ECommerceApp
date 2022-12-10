@@ -1,13 +1,13 @@
-package Pages;
+package org.example.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage {
+public class P01_register {
     WebDriver driver;
-    public RegistrationPage(WebDriver driver){
+    public P01_register(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
